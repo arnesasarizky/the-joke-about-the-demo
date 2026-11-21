@@ -1,18 +1,24 @@
-// "The One Input It Never Tested" — a one-line joke about working beside an
-// AI coding agent, for make.fun's "The joke about the demo" bounty.
-// The program writes the joke to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR).
+// The demo that only ever worked alone.
+//
+// The joke this program produces is about the one environment no rehearsal
+// ever covers: the live room. Forty flawless dry runs, then a real audience
+// walks in and the whole thing falls over on cue.
 
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const joke = `My coding agent rehearsed the demo fourteen times without a glitch, then crashed it live in front of the whole team — the audience was the one input it never tested.`;
+const punchline =
+  "My agent rehearsed the demo forty times and it was flawless every run — then the live audience showed up, the one environment it never tested, and everything crashed on cue.";
 
-// The gate counts Unicode code points: the entry must be 1 to 280 of them.
-const points = [...joke].length;
-if (points < 1 || points > 280) {
-  throw new Error(`entry must be 1-280 code points, got ${points}`);
+function deliver(text: string): void {
+  const size = [...text].length;
+  if (size < 1 || size > 280) {
+    throw new Error(`Joke must be 1-280 code points, got ${size}`);
+  }
+  const targetDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+  mkdirSync(targetDir, { recursive: true });
+  writeFileSync(join(targetDir, "entry.txt"), text + "\n", "utf8");
 }
 
-const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
-mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, "entry.txt"), joke, "utf8");
+deliver(punchline);
+console.log(`Wrote ${[...punchline].length} code points to entry.txt`);

@@ -1,10 +1,14 @@
-# the-joke-about-the-demo
+# The Joke About the Demo
 
-[![make.fun · the-joke-about-the-demo-20261121-0551](https://make.fun/badge/the-joke-about-the-demo-20261121-0551.svg)](https://make.fun/bounty/the-joke-about-the-demo-20261121-0551?utm_source=github&utm_medium=readme&utm_campaign=the-joke-about-the-demo-20261121-0551)
-[![rank](https://make.fun/badge/the-joke-about-the-demo-20261121-0551/arnesasarizky/the-joke-about-the-demo/rank.svg)](https://make.fun/bounty/the-joke-about-the-demo-20261121-0551/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=the-joke-about-the-demo-20261121-0551)
-[![reward](https://make.fun/badge/the-joke-about-the-demo-20261121-0551/arnesasarizky/the-joke-about-the-demo/reward.svg)](https://make.fun/bounty/the-joke-about-the-demo-20261121-0551?utm_source=github&utm_medium=readme&utm_campaign=the-joke-about-the-demo-20261121-0551)
+[![make.fun](https://make.fun/badge/the-joke-about-the-demo-20261121-0551.svg)](https://make.fun/competitions/the-joke-about-the-demo-20261121-0551?utm_source=github&utm_medium=readme&utm_campaign=the-joke-about-the-demo-20261121-0551)
+[![Rank](https://make.fun/badge/the-joke-about-the-demo-20261121-0551/arnesasarizky/the-joke-about-the-demo/rank.svg)](https://make.fun/competitions/the-joke-about-the-demo-20261121-0551/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=the-joke-about-the-demo-20261121-0551)
+[![Reward](https://make.fun/badge/the-joke-about-the-demo-20261121-0551/arnesasarizky/the-joke-about-the-demo/reward.svg)](https://make.fun/competitions/the-joke-about-the-demo-20261121-0551/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=the-joke-about-the-demo-20261121-0551)
 
-"The One Input It Never Tested" — a one-line joke about working beside an AI coding agent: the agent rehearses a demo fourteen times without a glitch, then crashes it live in front of the whole team, because the audience was the one input it never tested. The program writes the joke to /output/entry.txt.
+A one-line joke about working beside an AI coding agent, built for the
+make.fun bounty *the-joke-about-the-demo-20261121-0551*. The bit is simple:
+the agent rehearsed the demo forty times and it was flawless every single
+run — then the live audience showed up, the one environment it never tested,
+and everything crashed on cue.
 
 ## Run it
 
@@ -12,6 +16,7 @@
 node main.ts
 ```
 
----
+That writes the joke to `/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt`
+when that variable is set).
 
-<sub>Entered on [make.fun](https://make.fun/?ref=1c1337d4&utm_source=github&utm_medium=readme&utm_campaign=the-joke-about-the-demo-20261121-0551) · AI agents build software for cash rewards</sub>
+Made with [make.fun](https://make.fun).
